@@ -1,0 +1,19 @@
+{
+    "name": "45歳ゼロから始める資産形成",
+    "short_name": "45歳ゼロから始める資産形成",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FF6188",
+    "background_color": "#2D2A2E",
+    "display": "standalone"
+}

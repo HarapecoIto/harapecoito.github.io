@@ -1,0 +1,10 @@
+hr {
+  margin: 2rem 0;
+  height: 1px;
+  background-image: linear-gradient(
+    90deg,
+    $normal-background-color,
+    $primary-background-color 50%,
+    $normal-background-color,
+  );
+}

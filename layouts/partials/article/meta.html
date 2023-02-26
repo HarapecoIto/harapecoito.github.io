@@ -1,0 +1,16 @@
+<div class="meta">
+  <div class="created-at">{{ .Date.Format "2006-01-02" }}</div>
+  {{ if ne .Lastmod .Date }}
+    <div class="updated-at">{{ .Lastmod.Format "2006-01-02" }}</div>
+  {{ end }}
+  {{ if or (eq .Type "tech") .Params.tags }}
+    <ul class="tags">
+      {{ if eq .Type "tech" }}
+        <li><a href="{{ .Parent.RelPermalink }}" >{{ .Parent.Params.short_title }}</a></li>
+      {{ end }}
+      {{ range (.GetTerms "tags") }}
+        <li><a href="{{ .Page.RelPermalink }}" >{{ .Page.Title }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>

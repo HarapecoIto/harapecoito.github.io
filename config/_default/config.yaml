@@ -1,0 +1,38 @@
+baseURL: "http://example.org/"
+languageCode: "ja-jp"
+title: 45歳ゼロから始める資産形成
+contentDir: "content"
+publishDir: "public"
+hasCJKLanguage: true
+
+copyright: "(c) 2022-{year} Shimarisu Taro"
+
+disableKinds:
+  - "RSS"
+
+permalinks:
+  blog: /blog/:year:month:day/:filename/
+  item: /item/:year:month:day/:filename/
+  tech: /tech/:year:month:day/:filename/
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    noHl: false
+    style: rrt
+    tabWidth: 2
+
+taxonomies:
+  tag: tags

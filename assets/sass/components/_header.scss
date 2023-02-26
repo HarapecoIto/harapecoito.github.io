@@ -1,0 +1,28 @@
+header {
+  padding: 1rem;
+  background-color: $primary-background-color;
+  .site-title {
+    a {
+      img.logo {
+        width: 6rem;
+        vertical-align: middle;
+      }
+    }
+    h1 {
+      position: relative;
+      top: 1rem;
+      left: 1.2rem;
+      display: inline;
+      font-size: 2.5rem;
+      a {
+        &:link, &:active, &:visited {
+          color: $primary-foreground-color;
+        }
+        &:hover {
+          color: $hover-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
+{{ define "main" }}
+  <main class="main">
+    <article data-type="{{ .Type }}">
+      <h1>{{ .Title }}</h1>
+      {{ partial "partials/article/meta" . }}
+      {{ .Content }}
+      <hr/>
+      {{ partial "article/script" . }}
+    </article>
+  </main>
+  {{ partial "aside/aside" . }}
+{{ end }}

@@ -1,0 +1,18 @@
+aside {
+  padding: 2rem 1rem;
+  ul.sections, ul.sections ul {
+    padding-left: 2rem;
+    li {
+      display: list-item;
+      margin-left: 2rem;
+      list-style-type: circle;
+      a:link, a:active, a:visited {
+        color: $link-color;
+      }
+      a:hover {
+        color: $hover-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{{ $src := .Get "src" }}
+{{ $text := .Get "text" }}
+{{ $href := .Get "href" }}
+{{ $target := .Get "target" }}
+{{ $title := .Get "title"}}
+
+<a href="{{ $href | safeURL }}"{{ if $target }} target="{{ $target }}"{{ end }}{{ if $title }} title="{{ $title}}"{{ end }}>
+  {{ $text }}
+</a>

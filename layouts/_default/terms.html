@@ -1,0 +1,18 @@
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
+{{ define "main" }}
+  <main>
+    <article data-type="{{ .Type }}">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+      {{ if .Content }}<hr/>{{ end }}
+      <ul>
+        {{ range .Data.Terms.Alphabetical }}
+          <li><a href="{{ .Page.RelPermalink }}" >{{ .Page.Title }}</a></li>
+        {{ end }}
+      </ul>
+    </article>
+  </main>
+  {{ partial "aside/aside" . }}
+{{ end }}

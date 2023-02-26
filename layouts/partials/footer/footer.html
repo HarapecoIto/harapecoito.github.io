@@ -1,0 +1,6 @@
+<footer>
+  <div class="powered-by">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a></div>
+  <div class="copyright">
+    {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}
+  </div>
+</footer>

@@ -1,0 +1,100 @@
+[data-kind="home"],
+[data-kind="section"],
+[data-kind="term"] {
+  main {
+    padding: 1rem 2rem;
+    > article {
+      h1 {
+        margin: 2rem 0;
+        color: $headding-color;
+        font-size: 3rem;
+        &::before {
+          font-size: 2rem;
+          margin-right: .5rem;
+        }
+        &::after {
+          display: block;
+          margin: -.7rem 0 1rem 0;
+          content: "";
+          height: 2px;
+          background-color: $headding-color;
+        }
+      }
+      h2 {
+        font-size: 2.5rem;
+        color: $headding-color;
+        margin: 2rem 0;
+        &::after {
+          display: block;
+          margin: -.7rem 0 1rem 0;
+          content: "";
+          height: 2px;
+          background-color: $headding-color;
+        }
+      }
+      p {
+        margin: 1rem 0;
+        text-indent: 1em;
+        code {
+          text-indent: 0;
+        }
+      }
+      a:link, a:active, a:visited {
+        color: $link-color;
+      }
+      a:hover {
+        color: $hover-color;
+        text-decoration: underline;
+      }
+    }
+    .pages > article {
+      h1 {
+        font-size: 2.5rem;
+        color: $headding-color;
+        margin: 2rem 0;
+        &::before {
+          margin-right: .5rem;
+          font-size: 1.5rem;
+        }
+        &::after {
+          display: block;
+          margin: -.7rem 0 1rem 0;
+          content: "";
+          height: 2px;
+          background-color: $headding-color;
+        }
+        a:hover {
+          color: $hover-color;
+          text-decoration: underline;
+        }
+      }
+      h2 {
+        font-size: 2rem;
+        color: $headding-color;
+        margin: 1rem 0;
+        &::after {
+          display: block;
+          margin: -.7rem 0 1rem 0;
+          content: "";
+          height: 1px;
+          background-color: $headding-color;
+        }
+      }
+    }
+    .pagers {
+      display: block;
+      text-align: center;
+      .pager {
+        display: inline;
+        margin: 0 1rem;
+        a:link, a:active, a:visited {
+          color: $link-color;
+        }
+        a:hover {
+          color: $hover-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

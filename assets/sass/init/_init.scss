@@ -1,0 +1,15 @@
+html {
+  font-size: 62.5%;
+}
+html * {
+  box-sizing: border-box;
+  font-family: $text-font;
+  font-size: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+body {
+  font-size: 1.6rem;
+  color: $normal-foreground-color;
+  background-color: $normal-background-color;
+}

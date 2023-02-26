@@ -1,0 +1,67 @@
+article {
+  &[data-type="blog"] {
+    h1::before {
+      content: "[Blog]";
+    }
+  }
+  &[data-type="tech"] {
+    h1::before {
+      content: "[Tech]";
+    }
+  }
+  &[data-type="item"] {
+    h1::before {
+      content: "[Item]";
+    }
+  }
+  .meta {
+    margin-top: -1rem;
+    .created-at {
+      display: inline;
+      margin-right: 1rem;
+      &::before {
+        content: "\01f4c6";
+        margin-right: .5rem;
+      }
+    }
+    .updated-at {
+      display: inline;
+      &::before {
+        content: "\01f4dd";
+        margin-right: .5rem;
+      }
+    }
+    ul.tags {
+      display: inline;
+      li {
+        display: inline;
+        padding: 3px 8px;
+        margin: 2px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        &::before {
+          content: "#";
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+  p {
+    margin: 1rem 0;
+    text-indent: 1em;
+    code {
+      text-indent: 0;
+    }
+  }
+  .more {
+    text-align: right;
+  }
+  a:link, a:active, a:visited {
+    color: $link-color;
+  }
+  a:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}

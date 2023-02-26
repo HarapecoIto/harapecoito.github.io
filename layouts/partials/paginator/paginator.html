@@ -1,0 +1,40 @@
+{{ $context := .context }}
+{{ $paginator := .paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+  {{ $count := 5 }}
+  {{ $half := div $count 2 }}
+  {{ $from := math.Max 1 (math.Min (sub $paginator.PageNumber $half) (sub $paginator.Last.PageNumber (sub $count 1))) }}
+  {{ $to := math.Min (add $from (sub $count 1)) $paginator.Last.PageNumber }}
+  <hr/>
+  <ul class="pagers">
+    {{ if ne $paginator.PageNumber $paginator.First.PageNumber }}
+      <li class="pager"><a href="{{ $paginator.First.URL }}">≪</a></li>
+    {{ else }}
+      <li class="pager">≪</li>
+    {{ end }}
+    {{ if $paginator.HasPrev }}
+      <li class="pager"><a href="{{ $paginator.Prev.URL }}">&lt;</a></li>
+    {{ else }}
+      <li class="pager">&lt;</li>
+    {{ end }}
+    {{ range $pager := $paginator.Pagers }}
+      {{ if and (ge $pager.PageNumber $from) (le $pager.PageNumber $to) }}
+        {{ if eq $pager.PageNumber $paginator.PageNumber }}
+          <li class="pager">{{ $pager.PageNumber }}</li>
+        {{ else }}
+          <li class="pager"><a href="{{ $pager.URL }}">{{ $pager.PageNumber }}</a></li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if $paginator.HasNext }}
+      <li class="pager"><a href="{{ $paginator.Next.URL }}">&gt;</a></li>
+    {{ else }}
+      <li class="pager">&gt;</li>
+    {{ end }}
+    {{ if ne $paginator.PageNumber $paginator.Last.PageNumber }}
+      <li class="pager"><a href="{{ $paginator.Last.URL }}">≫</a></li>
+    {{ else }}
+      <li class="pager">≫</li>
+    {{ end }}
+  </ul>
+{{ end }}

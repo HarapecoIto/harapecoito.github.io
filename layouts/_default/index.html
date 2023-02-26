@@ -1,0 +1,21 @@
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
+{{ define "main" }}
+  <main>
+    <article data-type="{{ .Type }}">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+    <div class="pages">
+      {{ $paginator := .Paginate .Site.RegularPages.ByDate.Reverse 5 }}
+      {{ range $page := $paginator.Pages }}
+        <hr/>
+        {{ partial "summary/summary" $page }}
+      {{ end }}
+      {{ partial "partials/paginator/paginator" (dict "context" . "paginator" $paginator) }}
+    </div>
+    <hr/>
+  </main>
+  {{ partial "aside/aside" . }}
+{{ end }}

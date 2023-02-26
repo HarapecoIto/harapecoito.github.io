@@ -1,0 +1,18 @@
+footer {
+  padding: 1rem;
+  color: $primary-foreground-color;
+  background-color: $primary-background-color;
+  a:link, a:active, a:visited {
+    color: $link-color;;
+  }
+  a:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+  .powered-by {
+    text-align: center;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
