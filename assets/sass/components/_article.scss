@@ -1,17 +1,38 @@
+[data-kind="home"] {
+  article {
+    h1::before {
+      content: "[Top]";
+    }
+  }
+}
+[data-kind="taxonomy"] {
+  article {
+    h1::before {
+      content: "[Tags]";
+    }
+  }
+}
+[data-kind="tarm"] {
+  article {
+    h1::before {
+      content: "[Tag]";
+    }
+  }
+}
 article {
+  &[data-type="life"] {
+    h1::before {
+      content: "[Life]";
+    }
+  }
+  &[data-type="invest"] {
+    h1::before {
+      content: "[Invest]";
+    }
+  }
   &[data-type="blog"] {
     h1::before {
       content: "[Blog]";
-    }
-  }
-  &[data-type="tech"] {
-    h1::before {
-      content: "[Tech]";
-    }
-  }
-  &[data-type="item"] {
-    h1::before {
-      content: "[Item]";
     }
   }
   .meta {
