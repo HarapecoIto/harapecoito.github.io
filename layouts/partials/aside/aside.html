@@ -19,11 +19,11 @@
     {{ end }}
   </div>
   <ul class="sections">
-    <li><a href="{{ "/" | relURL }}">{{ (.Site.GetPage "/").Params.short_title | safeHTML }}</a></li>
+    <li><a href="{{ "/" | relURL }}">{{ "Top" | safeHTML }}</a></li>
     <ul>
-      <li><a href="{{ "/life/" | relURL }}">{{ (.Site.GetPage "/life/").Params.short_title | safeHTML }}</a></li>
-      <li><a href="{{ "/invest/" | relURL }}">{{ (.Site.GetPage "/invest/").Params.short_title | safeHTML }}</a></li>
-      <li><a href="{{ "/blog/" | relURL }}">{{ (.Site.GetPage "/blog/").Params.short_title | safeHTML }}</a></li>
+      <li><a href="{{ "/life/" | relURL }}">{{ (.Site.GetPage "/life/").Params.title | safeHTML }}</a></li>
+      <li><a href="{{ "/invest/" | relURL }}">{{ (.Site.GetPage "/invest/").Params.title | safeHTML }}</a></li>
+      <li><a href="{{ "/blog/" | relURL }}">{{ (.Site.GetPage "/blog/").Params.title | safeHTML }}</a></li>
     </ul>
   </ul>
 </aside>
