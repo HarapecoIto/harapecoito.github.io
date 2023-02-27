@@ -1,5 +1,0 @@
-{{ if.Params.script }}
-  {{ range $script := .Params.script }}
-    <script src="{{ relURL $script }}">{}</script>
-  {{ end }}
-{{ end }}

@@ -13,7 +13,7 @@
         <hr/>
         {{ partial "summary/summary" $page }}
       {{ end }}
-      {{ partial "partials/paginator/paginator" (dict "context" . "paginator" $paginator) }}
+      {{ partial "partials/paginator/paginator" $paginator }}
     </div>
     <hr/>
   </main>

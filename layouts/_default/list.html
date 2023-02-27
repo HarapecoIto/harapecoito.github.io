@@ -6,7 +6,6 @@
     <article data-type="{{ .Type }}">
       <h1>{{ .Title }}</h1>
       {{ .Content }}
-      {{ partial "article/script" . }}
     </article>
     <div class="pages">
       {{ $paginator := .Paginate .RegularPagesRecursive.ByDate.Reverse 5 }}
@@ -14,7 +13,9 @@
         <hr/>
         {{ partial "summary/summary" $page }}
       {{ end }}
-      {{ partial "partials/paginator/paginator" (dict "context" . "paginator" $paginator) }}
+      {{ if gt $paginator.TotalPages 0 }}
+        {{ partial "partials/paginator/paginator" $paginator }}
+      {{ end }}
     </div>
     <hr/>
   </main>

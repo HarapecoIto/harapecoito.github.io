@@ -21,13 +21,9 @@
   <ul class="sections">
     <li><a href="{{ "/" | relURL }}">{{ (.Site.GetPage "/").Params.short_title | safeHTML }}</a></li>
     <ul>
+      <li><a href="{{ "/life/" | relURL }}">{{ (.Site.GetPage "/life/").Params.short_title | safeHTML }}</a></li>
+      <li><a href="{{ "/invest/" | relURL }}">{{ (.Site.GetPage "/invest/").Params.short_title | safeHTML }}</a></li>
       <li><a href="{{ "/blog/" | relURL }}">{{ (.Site.GetPage "/blog/").Params.short_title | safeHTML }}</a></li>
-      <li><a href="{{ "/tech/" | relURL }}">{{ (.Site.GetPage "/tech/").Params.short_title | safeHTML }}</a></li>
-        <ul>
-          <li><a href="{{ "/tech/hugo/" | relURL }}">{{ (.Site.GetPage "/tech/hugo/").Params.short_title | safeHTML }}</a></li>
-          <li><a href="{{ "/tech/design/" | relURL }}">{{ (.Site.GetPage "/tech/design/").Params.short_title | safeHTML }}</a></li>
-        </ul>
-      <li><a href="{{ "/item/" | relURL }}">{{ (.Site.GetPage "/item/").Params.short_title | safeHTML }}</a></li>
     </ul>
   </ul>
 </aside>

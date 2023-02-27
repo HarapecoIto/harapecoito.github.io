@@ -2,12 +2,15 @@
   {{ .Title }}
 {{ end }}
 {{ define "main" }}
-  <main class="main">
+  <main>
     <article data-type="{{ .Type }}">
       <h1>{{ .Title }}</h1>
-      {{ partial "partials/article/meta" . }}
       {{ .Content }}
-      <hr/>
+      {{ if .Content }}<hr/>{{ end }}
+
+
+
+
     </article>
   </main>
   {{ partial "aside/aside" . }}

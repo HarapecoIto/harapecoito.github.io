@@ -1,5 +1,4 @@
-{{ $context := .context }}
-{{ $paginator := .paginator }}
+{{ $paginator := . }}
 {{ if gt $paginator.TotalPages 1 }}
   {{ $count := 5 }}
   {{ $half := div $count 2 }}
