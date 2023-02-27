@@ -11,9 +11,9 @@ disableKinds:
   - "RSS"
 
 permalinks:
-  life: /life/:year:month:day/:filename/
-  invest: /invest/:year:month:day/:filename/
-  blog: /blog/:year:month:day/:filename/
+  life: /life/:year:month:day/
+  invest: /invest/:year:month:day/
+  blog: /blog/:year:month:day/
   tags: /tag/:slug/
 
 markup:
