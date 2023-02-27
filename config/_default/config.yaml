@@ -11,9 +11,10 @@ disableKinds:
   - "RSS"
 
 permalinks:
+  life: /life/:year:month:day/:filename/
+  invest: /invest/:year:month:day/:filename/
   blog: /blog/:year:month:day/:filename/
-  item: /item/:year:month:day/:filename/
-  tech: /tech/:year:month:day/:filename/
+  tags: /tag/:slug/
 
 markup:
   goldmark:
